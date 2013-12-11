@@ -1,0 +1,8 @@
+.backgrid .nested-grid-cell .nested-controls{
+  margin:5px;
+}
+
+.backgrid .nested-grid-cell .nested-controls button{
+  width:100%;
+  line-height:16px;
+}

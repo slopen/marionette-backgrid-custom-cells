@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>backbone + marionette + backgrid custom cells</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="assets/css/backgrid.css">
+    <link rel="stylesheet" href="assets/css/backgrid-textarea-cell.css">
+    <link rel="stylesheet" href="assets/css/backgrid-range-cell.css">
+    <link rel="stylesheet" href="assets/css/backgrid-nested-grid-cell.css">
+    <link rel="stylesheet" href="assets/css/backgrid-delete-row-cell.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" media="screen"/>
+
+    <style>#preloader{position:absolute;top:50%;left:25%;width:45%;text-align:center}</style>
+
+    <!-- scripts -->
+   	<script data-main="assets/js/main.js" src="assets/js/libs/requirejs.js"></script>
+    <script>
+      requirejs.onResourceLoad = function (context, map, depArray){
+        var element = document.getElementById('log');
+        if (element) element.innerHTML = map.name.replace('-', ' ');
+      };
+    </script>
+
+    <!-- templates -->
+
+    <!-- 404 -->
+    <script type="text/template" id="not-found">
+        <div id="content">
+            <h2>Not found: <%= path %></h2>
+        </div>
+    </script>    
+    <!-- 404 -->
+
+
+    <!-- main page -->
+    <script type="text/template" id="main-page-layout">
+        <header id="header" class="page-header"></header>
+        <div id="content"></div>
+    </script>
+
+    <script type="text/template" id="collection-header">
+        <h1>Backgrid custom cells: items [<%= total %>]</h1>
+        <div class="controls clearfix well">
+            <a href="#" class="btn btn-success save pull-right">save</a>
+            <a href="#" class="btn btn-default add-row pull-left">add row</a>
+        </div>
+    </script>
+    <!-- main page -->
+
+</head>
+<body>
+
+    <div id="main">
+        <div id="preloader"><div id="log"></div></div>
+    </div>
+
+</body>
+</html>
+

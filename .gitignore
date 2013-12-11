@@ -1,0 +1,6 @@
+# IDE
+*.sublime-project
+*.sublime-workspace
+
+# other
+*.zip
