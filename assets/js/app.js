@@ -25,7 +25,7 @@ define ([
     // initialize navigation
     app.addInitializer(function(){
       
-      $(document).on('click', 'a', function (){
+      $(document).on('click', 'a[href]', function (){
         // links click cause the router navigate
         app.router.navigate( $(this).attr('href'), true );
         return false;
